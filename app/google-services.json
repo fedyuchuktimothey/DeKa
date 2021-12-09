@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767807818906",
+    "project_id": "deka-6984e",
+    "storage_bucket": "deka-6984e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767807818906:android:c3797f370793af1fd5a323",
+        "android_client_info": {
+          "package_name": "com.example.deka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767807818906-rq1fggom9scnmmd5s7hu6efnalo3e7a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9iy-Gj3GaDk-v6wm3u8KHepJwMnv3NGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767807818906-rq1fggom9scnmmd5s7hu6efnalo3e7a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
