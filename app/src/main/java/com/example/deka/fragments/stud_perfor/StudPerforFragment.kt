@@ -1,4 +1,4 @@
-package com.example.deka.fragments
+package com.example.deka.fragments.stud_perfor
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.deka.R
+import com.example.deka.fragments.find.FindFragment
+import com.example.deka.fragments.groups_functions.GroupsFunctionsFragment
+import com.example.deka.fragments.stud_perfor.StudPerforFragment
+import com.example.deka.fragments.students_functions.StudFunctionsFragment
 
 class MainFragment:Fragment() {
 
