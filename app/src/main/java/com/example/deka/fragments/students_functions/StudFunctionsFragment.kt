@@ -29,6 +29,13 @@ class StudFunctionsFragment:Fragment() {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.container, removeStudentFragment)?.addToBackStack("StudFunctionsFragment")?.commit()
         }
+        //Edit student button
+        val changeStudent = view.findViewById(R.id.changeStud) as Button
+        val changeStudentInfo = ChangeStudentInfo()
+        changeStudent.setOnClickListener() {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.container, changeStudentInfo)?.addToBackStack("StudFunctionsFragment")?.commit()
+        }
 
         return view
     }

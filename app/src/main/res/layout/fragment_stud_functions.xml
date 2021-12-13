@@ -56,7 +56,7 @@
        app:layout_constraintTop_toTopOf="parent" />
 
    <Button
-       android:id="@+id/editStud"
+       android:id="@+id/changeStud"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginTop="24dp"
@@ -71,9 +71,9 @@
        android:layout_height="wrap_content"
        android:layout_marginTop="81dp"
        android:text="Student marks"
-       app:layout_constraintEnd_toEndOf="@+id/editStud"
-       app:layout_constraintStart_toStartOf="@+id/editStud"
-       app:layout_constraintTop_toBottomOf="@+id/editStud" />
+       app:layout_constraintEnd_toEndOf="@+id/changeStud"
+       app:layout_constraintStart_toStartOf="@+id/changeStud"
+       app:layout_constraintTop_toBottomOf="@+id/changeStud" />
 
    <Button
        android:id="@+id/studMarks"

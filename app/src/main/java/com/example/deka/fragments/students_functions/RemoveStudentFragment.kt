@@ -21,7 +21,7 @@ class RemoveStudentFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_remove_student, container, false)
         val studNameRemove = view.findViewById<EditText>(R.id.studNameRemove)
         val studSurnameRemove = view.findViewById<EditText>(R.id.studSurnameRemove)
-        val studGroupRemove = view.findViewById<EditText>(R.id.studGroupREmove)
+        val studGroupRemove = view.findViewById<EditText>(R.id.studGroupRemove)
         val removeStudent = view.findViewById(R.id.removeStudent) as Button
         val db = Firebase.firestore
         removeStudent.setOnClickListener(){
