@@ -12,7 +12,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.HashMap
 
-class ChangeStudentInfo: Fragment() {
+class ChangeStudentInfoFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,7 +23,6 @@ class ChangeStudentInfo: Fragment() {
         val newStudName = view.findViewById<EditText>(R.id.newStudName)
         val oldStudSurname = view.findViewById<EditText>(R.id.oldStudSurname)
         val newStudSurname = view.findViewById<EditText>(R.id.newStudSurname)
-        val oldStudGroup = view.findViewById<EditText>(R.id.oldStudGroup)
         val newStudGroup = view.findViewById<EditText>(R.id.newStudGroup)
         val updateStudInfo = view.findViewById(R.id.updateStudInfo) as Button
         val db = Firebase.firestore
@@ -31,7 +30,8 @@ class ChangeStudentInfo: Fragment() {
             val student = HashMap<String, Any>()
             student["name"] = newStudName.text.toString()
             student["surname"] = newStudSurname.text.toString()
-            db.collection("Students").document("Groups").collection(oldStudGroup.text.toString()).document("${oldStudSurname.text} ${oldStudName.text}")
+            student["group"] = newStudGroup.text.toString()
+            db.collection("Students").document("${oldStudSurname.text} ${oldStudName.text}")
                 .delete()
                 .addOnSuccessListener { documentReference ->
                     //  Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
@@ -39,7 +39,7 @@ class ChangeStudentInfo: Fragment() {
                 .addOnFailureListener { e ->
                     // Log.w(TAG, "Error adding document", e)
                 }
-            db.collection("Students").document("Groups").collection(newStudGroup.text.toString()).document("${newStudSurname.text} ${newStudName.text}")
+            db.collection("Students").document("${newStudSurname.text} ${newStudName.text}")
                 .set(student)
                 .addOnSuccessListener { documentReference ->
                     //  Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")

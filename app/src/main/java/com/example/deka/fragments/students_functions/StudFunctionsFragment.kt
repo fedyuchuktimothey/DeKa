@@ -17,26 +17,32 @@ class StudFunctionsFragment:Fragment() {
         val view = inflater.inflate(R.layout.fragment_stud_functions, container, false)
         //Add student button
         val addStud = view.findViewById(R.id.addStud) as Button
-        val addStudentFragment = AddStudentFragment()
+        val addStudent = AddStudentFragment()
         addStud.setOnClickListener() {
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, addStudentFragment)?.addToBackStack("StudFunctionsFragment")?.commit()
+                ?.replace(R.id.container, addStudent)?.addToBackStack("StudFunctionsFragment")?.commit()
         }
         //Remove student button
         val removeStud = view.findViewById(R.id.removeStud) as Button
-        val removeStudentFragment = RemoveStudentFragment()
+        val removeStudent = RemoveStudentFragment()
         removeStud.setOnClickListener() {
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, removeStudentFragment)?.addToBackStack("StudFunctionsFragment")?.commit()
+                ?.replace(R.id.container, removeStudent)?.addToBackStack("StudFunctionsFragment")?.commit()
         }
         //Edit student button
         val changeStudent = view.findViewById(R.id.changeStud) as Button
-        val changeStudentInfo = ChangeStudentInfo()
+        val changeStudentInfo = ChangeStudentInfoFragment()
         changeStudent.setOnClickListener() {
             activity?.supportFragmentManager?.beginTransaction()
                 ?.replace(R.id.container, changeStudentInfo)?.addToBackStack("StudFunctionsFragment")?.commit()
         }
-
+        // All students button
+        val showAllStud = view.findViewById(R.id.showAllStud) as Button
+        val allStudentsList = AllStudentsListFragment()
+        showAllStud.setOnClickListener() {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.container, allStudentsList)?.addToBackStack("StudFunctionsFragment")?.commit()
+        }
         return view
     }
 }

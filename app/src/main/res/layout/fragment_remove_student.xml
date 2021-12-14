@@ -25,16 +25,6 @@
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="103dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Enter student's group number"
-        app:layout_constraintEnd_toEndOf="@+id/textView14"
-        app:layout_constraintStart_toStartOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
     <EditText
         android:id="@+id/studNameRemove"
         android:layout_width="wrap_content"
@@ -54,16 +44,6 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <EditText
-        android:id="@+id/studGroupRemove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toTopOf="@+id/textView15" />
 
     <Button
         android:id="@+id/removeStudent"

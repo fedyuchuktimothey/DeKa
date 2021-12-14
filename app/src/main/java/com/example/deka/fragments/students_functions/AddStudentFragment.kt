@@ -31,7 +31,9 @@ class AddStudentFragment:Fragment() {
             val student = HashMap<String, Any>()
             student["name"] = studName.text.toString()
             student["surname"] = studSurname.text.toString()
-            db.collection("Students").document("Groups").collection(studGroup.text.toString()).document("${studSurname.text} ${studName.text}")
+            student["group"] = studGroup.text.toString()
+
+            db.collection("Students").document("${studSurname.text} ${studName.text}")
                 .set(student)
                 .addOnSuccessListener { documentReference ->
                   //  Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")

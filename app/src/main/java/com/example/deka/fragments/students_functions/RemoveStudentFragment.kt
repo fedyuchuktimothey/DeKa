@@ -21,14 +21,10 @@ class RemoveStudentFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_remove_student, container, false)
         val studNameRemove = view.findViewById<EditText>(R.id.studNameRemove)
         val studSurnameRemove = view.findViewById<EditText>(R.id.studSurnameRemove)
-        val studGroupRemove = view.findViewById<EditText>(R.id.studGroupRemove)
         val removeStudent = view.findViewById(R.id.removeStudent) as Button
         val db = Firebase.firestore
         removeStudent.setOnClickListener(){
-            val student = HashMap<String, Any>()
-            student["name"] = studNameRemove.text.toString()
-            student["surname"] = studSurnameRemove.text.toString()
-            db.collection("Students").document("Groups").collection(studGroupRemove.text.toString()).document("${studSurnameRemove.text} ${studNameRemove.text}")
+            db.collection("Students").document("${studSurnameRemove.text} ${studNameRemove.text}")
                 .delete()
                 .addOnSuccessListener { documentReference ->
                     //  Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
