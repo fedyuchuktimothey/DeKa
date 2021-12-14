@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+   <TextView
+       android:id="@+id/textView6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="50dp"
+       android:layout_marginTop="160dp"
+       android:text="Add student"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/addStud"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Start"
+       app:layout_constraintEnd_toEndOf="@+id/textView6"
+       app:layout_constraintStart_toStartOf="@+id/textView6"
+       app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+   <TextView
+       android:id="@+id/textView7"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="81dp"
+       android:text="Remove student"
+       app:layout_constraintEnd_toEndOf="@+id/addStud"
+       app:layout_constraintStart_toStartOf="@+id/addStud"
+       app:layout_constraintTop_toBottomOf="@+id/addStud" />
+
+   <Button
+       android:id="@+id/removeStud"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Start"
+       app:layout_constraintEnd_toEndOf="@+id/textView7"
+       app:layout_constraintStart_toStartOf="@+id/textView7"
+       app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+   <TextView
+       android:id="@+id/textView8"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="160dp"
+       android:layout_marginEnd="50dp"
+       android:text="Edit srudent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/changeStud"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Start"
+       app:layout_constraintEnd_toEndOf="@+id/textView8"
+       app:layout_constraintStart_toStartOf="@+id/textView8"
+       app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+   <TextView
+       android:id="@+id/textView9"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="81dp"
+       android:text="Student marks"
+       app:layout_constraintEnd_toEndOf="@+id/changeStud"
+       app:layout_constraintStart_toStartOf="@+id/changeStud"
+       app:layout_constraintTop_toBottomOf="@+id/changeStud" />
+
+   <Button
+       android:id="@+id/studMarks"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Start"
+       app:layout_constraintEnd_toEndOf="@+id/textView9"
+       app:layout_constraintStart_toStartOf="@+id/textView9"
+       app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+   <TextView
+       android:id="@+id/textView10"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="2dp"
+       android:layout_marginTop="81dp"
+       android:layout_marginEnd="2dp"
+       android:text="Show all students"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/removeStud" />
+
+   <Button
+       android:id="@+id/showAllStud"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Start"
+       app:layout_constraintEnd_toEndOf="@+id/textView10"
+       app:layout_constraintStart_toStartOf="@+id/textView10"
+       app:layout_constraintTop_toBottomOf="@+id/textView10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
