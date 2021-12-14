@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/fragment_find.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/fragment_group_list.xml" value="0.24864130434782608" />
         <entry key="app/src/main/res/layout/fragment_groups_functions.xml" value="0.21979166666666666" />
+        <entry key="app/src/main/res/layout/fragment_groups_list.xml" value="0.24320652173913043" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_remove_student.xml" value="0.24864130434782608" />
         <entry key="app/src/main/res/layout/fragment_stud_functions.xml" value="0.25" />
