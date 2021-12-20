@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import com.example.deka.R
 import com.example.deka.fragments.find.FindFragment
 import com.example.deka.fragments.groups_functions.GroupsFunctionsFragment
@@ -23,35 +25,20 @@ class MainFragment:Fragment() {
 
         //Students Functions Button
         val studFunc = view.findViewById(R.id.studFunc) as Button
-        val studFunctionsFragment = StudFunctionsFragment()
-        studFunc.setOnClickListener() {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, studFunctionsFragment)?.addToBackStack("MainFragment")?.commit()
-        }
+        studFunc.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.studFunctionsFragment, null))
 
         // Find Button
         val find = view.findViewById(R.id.find) as Button
-        val findFragment = FindFragment()
-        find.setOnClickListener() {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, findFragment)?.addToBackStack("MainFragment")?.commit()
-        }
+        find.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.findFragment, null))
 
         //Students Performance Button
         val studPerfor = view.findViewById(R.id.studPerfor) as Button
-        val studPerforFragment = StudPerforFragment()
-        studPerfor.setOnClickListener() {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, studPerforFragment)?.addToBackStack("MainFragment")?.commit()
-        }
+        //studPerfor.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.studPerfor, null))
 
         //Groups Functions Button
         val groupFunc = view.findViewById(R.id.groupFunc) as Button
-        val groupsFunctionsFragment = GroupsFunctionsFragment()
-        groupFunc.setOnClickListener() {
-            activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.container, groupsFunctionsFragment)?.addToBackStack("MainFragment")?.commit()
-        }
+       // groupFunc.setOnClickListener(Navigation.createNavigateOnClickListener(R.id., null))
+
 
         return view
     }

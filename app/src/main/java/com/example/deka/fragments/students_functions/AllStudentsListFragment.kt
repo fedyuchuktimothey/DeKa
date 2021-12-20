@@ -22,7 +22,7 @@ class AllStudentsListFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_groups_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_students_list, container, false)
         var listview:ListView
         val db = Firebase.firestore
         val studentslist = ArrayList<HashMap<String, String>>()

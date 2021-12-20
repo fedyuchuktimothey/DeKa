@@ -10,7 +10,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.example.deka.R
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.HashMap
@@ -27,12 +30,12 @@ class AddStudentFragment:Fragment() {
         val studGroup = view.findViewById<EditText>(R.id.studGroupNumber)
         val addNewStud = view.findViewById(R.id.addNewStud) as Button
         val db = Firebase.firestore
-        addNewStud.setOnClickListener(){
+        addNewStud.setOnClickListener{
+
             val student = HashMap<String, Any>()
             student["name"] = studName.text.toString()
             student["surname"] = studSurname.text.toString()
             student["group"] = studGroup.text.toString()
-
             db.collection("Students").document("${studSurname.text} ${studName.text}")
                 .set(student)
                 .addOnSuccessListener { documentReference ->
@@ -41,8 +44,8 @@ class AddStudentFragment:Fragment() {
                 .addOnFailureListener { e ->
                    // Log.w(TAG, "Error adding document", e)
                 }
+            findNavController(this).navigate(R.id.studFunctionsFragment)
         }
         return view
     }
-
 }
