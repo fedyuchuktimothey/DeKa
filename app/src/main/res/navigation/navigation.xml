@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.deka.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_studFunctionsFragment"
+            app:destination="@id/studFunctionsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_findFragment"
+            app:destination="@id/findFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_studPerforFragment"
+            app:destination="@id/studPerforFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_groupsFunctionsFragment"
+            app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studFunctionsFragment"
+        android:name="com.example.deka.fragments.students_functions.StudFunctionsFragment"
+        android:label="StudFunctionsFragment"
+        tools:layout="@layout/fragment_stud_functions">
+        <action
+            android:id="@+id/action_studFunctionsFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+        <action
+            android:id="@+id/action_studFunctionsFragment_to_changeStudentInfoFragment"
+            app:destination="@id/changeStudentInfoFragment" />
+        <action
+            android:id="@+id/action_studFunctionsFragment_to_removeStudentFragment"
+            app:destination="@id/removeStudentFragment" />
+        <action
+            android:id="@+id/action_studFunctionsFragment_to_allStudentsListFragment"
+            app:destination="@id/allStudentsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.deka.fragments.students_functions.AddStudentFragment"
+        android:label="AddStudentFragment"
+        tools:layout="@layout/fragment_add_student">
+        <action
+            android:id="@+id/action_addStudentFragment_to_studFunctionsFragment2"
+            app:destination="@id/studFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findFragment"
+        android:name="com.example.deka.fragments.find.FindFragment"
+        android:label="FindFragment"
+        tools:layout="@layout/fragment_find"/>
+    <fragment
+        android:id="@+id/changeStudentInfoFragment"
+        android:name="com.example.deka.fragments.students_functions.ChangeStudentInfoFragment"
+        android:label="ChangeStudentInfoFragment"
+        tools:layout="@layout/fragment_change_student_info">
+        <action
+            android:id="@+id/action_changeStudentInfoFragment_to_studFunctionsFragment"
+            app:destination="@id/studFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeStudentFragment"
+        android:name="com.example.deka.fragments.students_functions.RemoveStudentFragment"
+        android:label="RemoveStudentFragment"
+        tools:layout="@layout/fragment_remove_student">
+        <action
+            android:id="@+id/action_removeStudentFragment_to_studFunctionsFragment"
+            app:destination="@id/studFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allStudentsListFragment"
+        android:name="com.example.deka.fragments.students_functions.AllStudentsListFragment"
+        android:label="AllStudentsListFragment"
+        tools:layout="@layout/fragment_students_list">
+        <action
+            android:id="@+id/action_allStudentsListFragment_to_studFunctionsFragment"
+            app:destination="@id/studFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsFunctionsFragment"
+        android:name="com.example.deka.fragments.groups_functions.GroupsFunctionsFragment"
+        android:label="GroupsFunctionsFragment"
+        tools:layout="@layout/fragment_groups_functions"/>
+    <fragment
+        android:id="@+id/studPerforFragment"
+        android:name="com.example.deka.fragments.stud_perfor.StudPerforFragment"
+        android:label="StudPerforFragment"
+        tools:layout="@layout/fragment_stud_perfor"/>
+</navigation>
