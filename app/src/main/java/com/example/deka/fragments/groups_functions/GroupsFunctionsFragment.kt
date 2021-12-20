@@ -17,8 +17,8 @@ class GroupsFunctionsFragment: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_groups_functions, container, false)
         // Remove certain group
-        val findStudentData = view.findViewById(R.id.findStudentData) as Button
-        findStudentData.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.dataStudFormFragment, null))
+        val groupRemove = view.findViewById(R.id.groupRemove) as Button
+        groupRemove.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.removeGroupFragment, null))
         return view
     }
 }
