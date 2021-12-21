@@ -38,6 +38,7 @@ class AddStudentFragment:Fragment() {
             student["surname"] = studSurname.text.toString()
             student["group"] = studGroup.text.toString()
             student["group"] = studGroup.text.toString()
+            student["objects"]= HashMap<Any,Any>()
 
             db.collection("Students").document("${studSurname.text} ${studName.text}")
                 .set(student)
