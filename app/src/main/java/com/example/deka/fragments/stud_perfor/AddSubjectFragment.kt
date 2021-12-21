@@ -26,7 +26,7 @@ class AddSubjectFragment : Fragment() {
         val addNewSubject = view.findViewById(R.id.addNewSubject) as Button
         val db = Firebase.firestore
         addNewSubject.setOnClickListener{
-            val data = hashMapOf("System" to "System")
+            val data = hashMapOf("System" to "0")
 
             db.collection("Students").document("${studSurname.text} ${studName.text}").update("${newSubject.text}", data)
             NavHostFragment.findNavController(this).navigate(R.id.studPerforFragment)
