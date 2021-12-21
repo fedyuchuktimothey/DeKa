@@ -101,7 +101,17 @@
         android:id="@+id/groupsFunctionsFragment"
         android:name="com.example.deka.fragments.groups_functions.GroupsFunctionsFragment"
         android:label="GroupsFunctionsFragment"
-        tools:layout="@layout/fragment_groups_functions"/>
+        tools:layout="@layout/fragment_groups_functions">
+        <action
+            android:id="@+id/action_groupsFunctionsFragment_to_removeGroup"
+            app:destination="@id/removeGroupFragment" />
+        <action
+            android:id="@+id/action_groupsFunctionsFragment_to_addGroupFragment"
+            app:destination="@id/addGroupFragment" />
+        <action
+            android:id="@+id/action_groupsFunctionsFragment_to_groupInfoFragment"
+            app:destination="@id/groupInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/studPerforFragment"
         android:name="com.example.deka.fragments.stud_perfor.StudPerforFragment"
@@ -144,4 +154,31 @@
         android:name="com.example.deka.fragments.find.ScoreStudFormFragment"
         android:label="ScoreStudFormFragment"
         tools:layout="@layout/fragment_score_stud_form"/>
+    <fragment
+        android:id="@+id/removeGroupFragment"
+        android:name="com.example.deka.fragments.groups_functions.RemoveGroupFragment"
+        android:label="RemoveGroup"
+        tools:layout="@layout/fragment_remove_group">
+        <action
+            android:id="@+id/action_removeGroup_to_groupsFunctionsFragment"
+            app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroupFragment"
+        android:name="com.example.deka.fragments.groups_functions.AddGroupFragment"
+        android:label="AddGroupFragment"
+        tools:layout="@layout/fragment_add_group">
+        <action
+            android:id="@+id/action_addGroupFragment_to_groupsFunctionsFragment"
+            app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupInfoFragment"
+        android:name="com.example.deka.fragments.groups_functions.GroupInfoFragment"
+        android:label="GroupInfoFragment"
+        tools:layout="@layout/fragment_group_info">
+        <action
+            android:id="@+id/action_groupInfoFragment_to_groupsFunctionsFragment"
+            app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
 </navigation>

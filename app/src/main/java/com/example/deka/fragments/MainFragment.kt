@@ -37,7 +37,7 @@ class MainFragment:Fragment() {
 
         //Groups Functions Button
         val groupFunc = view.findViewById(R.id.groupFunc) as Button
-       // groupFunc.setOnClickListener(Navigation.createNavigateOnClickListener(R.id., null))
+        groupFunc.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.groupsFunctionsFragment, null))
 
 
         return view
