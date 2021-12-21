@@ -30,6 +30,7 @@ class GroupInfoFragment : Fragment(){
 
         showInfo.setOnClickListener {
             Log.d("Step 2", "is done")
+            //TODO success unsuccess
 
             var i = 0
             db.collection("Students")

@@ -16,7 +16,9 @@ class StudPerforFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_stud_perfor, container, false)
-
+        // Add new subject
+        val addSubject = view.findViewById(R.id.addSubject) as Button
+        addSubject.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.addSubjectFragment, null))
         return view
     }
 }

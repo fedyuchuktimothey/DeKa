@@ -116,7 +116,11 @@
         android:id="@+id/studPerforFragment"
         android:name="com.example.deka.fragments.stud_perfor.StudPerforFragment"
         android:label="StudPerforFragment"
-        tools:layout="@layout/fragment_stud_perfor"/>
+        tools:layout="@layout/fragment_stud_perfor">
+        <action
+            android:id="@+id/action_studPerforFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
+    </fragment>
     <fragment
         android:id="@+id/unsuccessStudFragment"
         android:name="com.example.deka.fragments.find.UnsuccessStudFragment"
@@ -180,5 +184,14 @@
         <action
             android:id="@+id/action_groupInfoFragment_to_groupsFunctionsFragment"
             app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSubjectFragment"
+        android:name="com.example.deka.fragments.stud_perfor.AddSubjectFragment"
+        android:label="AddSubjectFragment"
+        tools:layout="@layout/fragment_add_subject">
+        <action
+            android:id="@+id/action_addSubjectFragment_to_studPerforFragment"
+            app:destination="@id/studPerforFragment" />
     </fragment>
 </navigation>

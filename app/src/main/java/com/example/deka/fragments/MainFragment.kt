@@ -33,7 +33,7 @@ class MainFragment:Fragment() {
 
         //Students Performance Button
         val studPerfor = view.findViewById(R.id.studPerfor) as Button
-        //studPerfor.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.studPerfor, null))
+        studPerfor.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.studPerforFragment, null))
 
         //Groups Functions Button
         val groupFunc = view.findViewById(R.id.groupFunc) as Button
