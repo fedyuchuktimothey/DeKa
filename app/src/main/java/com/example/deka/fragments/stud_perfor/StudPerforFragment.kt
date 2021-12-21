@@ -25,6 +25,9 @@ class StudPerforFragment: Fragment() {
         // Add / change grades
         val addChangeGrade = view.findViewById(R.id.addGrades) as Button
         addChangeGrade.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.addGradesFragment, null))
+        // Obtain grades
+        val obtainGrades = view.findViewById(R.id.obtainGrades) as Button
+        obtainGrades.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.obtainGradesFragment, null))
         return view
     }
 }
