@@ -108,6 +108,9 @@
         <action
             android:id="@+id/action_groupsFunctionsFragment_to_addGroupFragment"
             app:destination="@id/addGroupFragment" />
+        <action
+            android:id="@+id/action_groupsFunctionsFragment_to_groupInfoFragment"
+            app:destination="@id/groupInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/studPerforFragment"
@@ -167,6 +170,15 @@
         tools:layout="@layout/fragment_add_group">
         <action
             android:id="@+id/action_addGroupFragment_to_groupsFunctionsFragment"
+            app:destination="@id/groupsFunctionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupInfoFragment"
+        android:name="com.example.deka.fragments.groups_functions.GroupInfoFragment"
+        android:label="GroupInfoFragment"
+        tools:layout="@layout/fragment_group_info">
+        <action
+            android:id="@+id/action_groupInfoFragment_to_groupsFunctionsFragment"
             app:destination="@id/groupsFunctionsFragment" />
     </fragment>
 </navigation>

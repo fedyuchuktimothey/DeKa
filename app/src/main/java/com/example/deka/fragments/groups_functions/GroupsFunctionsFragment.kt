@@ -19,9 +19,12 @@ class GroupsFunctionsFragment: Fragment() {
         // Remove certain group
         val groupRemove = view.findViewById(R.id.groupRemove) as Button
         groupRemove.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.removeGroupFragment, null))
-        // Add  group
+        // Add group
         val addGroup = view.findViewById(R.id.addGroup) as Button
         addGroup.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.addGroupFragment, null))
+        // Group info
+        val showGroupInfo = view.findViewById(R.id.showGroupInfo) as Button
+        showGroupInfo.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.groupInfoFragment, null))
         return view
     }
 }

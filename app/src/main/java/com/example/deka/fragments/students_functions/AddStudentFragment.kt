@@ -33,9 +33,12 @@ class AddStudentFragment:Fragment() {
         addNewStud.setOnClickListener{
 
             val student = HashMap<String, Any>()
+            //TODO Type of study ( contract or budget)
             student["name"] = studName.text.toString()
             student["surname"] = studSurname.text.toString()
             student["group"] = studGroup.text.toString()
+            student["group"] = studGroup.text.toString()
+
             db.collection("Students").document("${studSurname.text} ${studName.text}")
                 .set(student)
                 .addOnSuccessListener { documentReference ->
