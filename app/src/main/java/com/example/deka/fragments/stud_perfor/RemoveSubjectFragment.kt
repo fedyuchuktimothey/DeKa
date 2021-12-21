@@ -9,27 +9,27 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.deka.R
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class AddSubjectFragment : Fragment() {
+class RemoveSubjectFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_add_subject, container, false)
-        val studName = view.findViewById(R.id.subjectStudName) as EditText
-        val studSurname = view.findViewById(R.id.subjectStudSurname) as EditText
-        val newSubject = view.findViewById(R.id.newSubject) as EditText
-        val addNewSubject = view.findViewById(R.id.addNewSubject) as Button
+        val view = inflater.inflate(R.layout.fragment_remove_subject, container, false)
+        val studName = view.findViewById(R.id.removeStudName) as EditText
+        val studSurname = view.findViewById(R.id.removeStudSurname) as EditText
+        val removeSubjectName = view.findViewById(R.id.removeSubjectName) as EditText
+        val subjectRemove = view.findViewById(R.id.subjectRemove) as Button
         val db = Firebase.firestore
-        addNewSubject.setOnClickListener{
-            val data = hashMapOf("${newSubject.text}" to "0")
-
-            db.collection("Students").document("${studSurname.text} ${studName.text}")
-                .set(data, SetOptions.merge())
+        subjectRemove.setOnClickListener{
+            val updates = hashMapOf<String, Any>(
+                removeSubjectName.text.toString() to FieldValue.delete())
+            db.collection("Students").document("${studSurname.text} ${studName.text}").update(updates)
             NavHostFragment.findNavController(this).navigate(R.id.studPerforFragment)
         }
         return view

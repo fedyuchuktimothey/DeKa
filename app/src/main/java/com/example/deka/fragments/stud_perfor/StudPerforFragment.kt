@@ -19,6 +19,9 @@ class StudPerforFragment: Fragment() {
         // Add new subject
         val addSubject = view.findViewById(R.id.addSubject) as Button
         addSubject.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.addSubjectFragment, null))
+        // Remove subject
+        val removeSubject = view.findViewById(R.id.removeSubject) as Button
+        removeSubject.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.removeSubjectFragment, null))
         return view
     }
 }

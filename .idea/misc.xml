@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_remove_group.xml" value="0.2318840579710145" />
         <entry key="app/src/main/res/layout/fragment_remove_student.xml" value="0.24864130434782608" />
+        <entry key="app/src/main/res/layout/fragment_remove_subject.xml" value="0.19675925925925927" />
         <entry key="app/src/main/res/layout/fragment_score_stud_form.xml" value="0.2318840579710145" />
         <entry key="app/src/main/res/layout/fragment_stud_functions.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_stud_perfor.xml" value="0.21979166666666666" />
